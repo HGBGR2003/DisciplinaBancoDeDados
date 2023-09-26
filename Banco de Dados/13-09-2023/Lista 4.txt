@@ -1,0 +1,29 @@
+1 - 
+b) π rg (σ cidade = 'Goiânia' (endereco))
+
+c) π rua(σ cidade = 'Goiânia' and bairro = 'Jardim Goiás' (endereco))
+
+d) π nome, tipo(σ tipo = 'Flor' (produtos)) <= Feito pelo tipo e nome, pra ficar melhor a visualização da requisição.
+
+e) π qtd_estoque ( σ qtd_estoque > 100 (produtos))
+
+f) π qtd_estoque (σ qtd_estoque > 10 and qtd_estoque < 50 (produtos))
+
+g) π nome, qtd_estoque (σ tipo = 'Planta' and  preco > 80(produtos))
+
+h) π data_compra (σ data_compra >= '2022-11-01' and data_compra <= '2023-08-22' (compras))
+
+i) π rg, telefone (σ nome = 'Maria' (clientes))
+
+j) π rua (σ bairro = 'Jardim Europa' ∧ numero < 145 (endereco))
+
+k) π nome, qtd_estoque (σ tipo = 'Vaso' and preco >= 45 and preco <= 120 (produtos))
+
+l) π rg (σ valor_total >= 1000 (compras))
+
+m) π nome (σ preco > 5000 (produtos))
+
+n) π valor_total (σ data_compra >= '2022-11-02' and data_compra <= '2022-11-28' (compras))
+
+o) π qtd, valor_compra (σ idproduto = 5 (compras_produtos))
+
