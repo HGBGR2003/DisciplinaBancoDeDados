@@ -1,0 +1,14 @@
+1) 
+a) π marca,modelo,ano,nome(clientes ⨝ clientes.id = veiculos.idcliente veiculos)
+
+b) π'Select' marca,modelo,ano 'Join and Where'(clientes ⨝ clientes.id = veiculos.idcliente veiculos)
+
+c) π marca,modelo,ano,nome(clientes ⨝ clientes.id = veiculos.idcliente veiculos)⨝ 
+ σ nome = 'Pablo Corsa' (clientes)
+
+d) π concat('Mecânico: ',nome,concat('. Especialista em: ',especialidade))->Especialidades (mecanico)
+
+e) π descricao (σ valor > 100 (servicos))
+
+f) π descricao,valor(realiza ⨝ idservico = servicos.id servicos)⨝ 
+σ id = 2 (veiculos)
