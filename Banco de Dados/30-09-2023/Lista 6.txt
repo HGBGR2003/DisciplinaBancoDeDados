@@ -12,3 +12,7 @@ e) π Fname,Lname (EMPLOYEE ⨝ Pname = PROJECT.Pname PROJECT)
 
 f) π Dlocation (DEPARTMENT ⨝ Dlocation = DEPT_LOCATIONS.Dlocation DEPT_LOCATIONS) 
 ⨝ σ Dname = 'Research' (DEPARTMENT)
+
+g) π Fname (EMPLOYEE ⨝ Pname = PROJECT.Pname PROJECT) ⨝ (EMPLOYEE 
+⨝ Hours = WORKS_ON.Hours WORKS_ON) ⨝ σ Pname = 'ProductY' and  
+Hours < 15 (PROJECT ⨝ WORKS_ON)
