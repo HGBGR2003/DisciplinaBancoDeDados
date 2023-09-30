@@ -1,0 +1,14 @@
+1 - a) π Fname (DEPARTMENT ⨝ Fname = EMPLOYEE.Fname EMPLOYEE) ⨝ σ Dname = 'Research'(DEPARTMENT)
+
+b) π Fname (σ Bdate >= '1960-01-01' and Bdate < '1970-01-01' (EMPLOYEE))
+
+c) π Dname, Relationship (DEPARTMENT ⨝ Relationship = 
+DEPENDENT.Relationship DEPENDENT) ⨝ σ Fname = 'Franklin' (EMPLOYEE)
+
+d)π Fname,Sex (EMPLOYEE ⨝ Hours = WORKS_ON.Hours WORKS_ON) ⨝ σ Hours < 20 (WORKS_ON)
+
+e) π Fname,Lname (EMPLOYEE ⨝ Pname = PROJECT.Pname PROJECT) 
+⨝ (WORKS_ON ⨝ Pname = PROJECT.Pname PROJECT) ⨝ σ Pname = 'ProductY' (PROJECT)
+
+f) π Dlocation (DEPARTMENT ⨝ Dlocation = DEPT_LOCATIONS.Dlocation DEPT_LOCATIONS) 
+⨝ σ Dname = 'Research' (DEPARTMENT)
