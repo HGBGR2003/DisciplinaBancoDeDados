@@ -8,18 +8,17 @@ c) π marca,modelo,ano,nome(clientes ⨝ clientes.id = veiculos.idcliente veicul
 
 d) π concat('Mecânico: ',nome,concat('. Especialista em: ',especialidade))->Especialidades (mecanico)
 
-e) π descricao (σ valor > 100 (servicos))
+e) σ valor > 100 (servicos)
 
-f) π descricao,valor(realiza ⨝ idservico = servicos.id servicos)⨝ 
-σ id = 2 (veiculos)
+f) π descricao,valor (σ idveiculo = 2(servicos ⨝ servicos.id = realiza.idservico realiza))
 
-g) π nome,descricao(realiza ⨝ nome = mecanico.nome mecanico ⨝ descricao = servicos.descricao servicos) 
-⨝ σ id = 5 (veiculos)
-
-h) π marca, ano (σ marca = 'FIAT' and ano < 2022  (veiculos))
+g) π nome,descricao (σ idveiculo = 5 ((servicos ⨝ servicos.id = realiza.idservico realiza) ⨝ realiza.idmecanico = mecanico.id mecanico))
+ 
+h)σ marca = 'FIAT' and ano < 2022  (veiculos)
 
 i) π idservico (realiza ⨝ id = servicos.id servicos) ⨝ (realiza ⨝ nome = clientes.nome clientes) 
 ⨝ σ nome = 'Pablo Corsa' (clientes)
 
-j) π valor (veiculos ⨝ valor = servicos.valor servicos) ⨝ 
-σ id = 1 (veiculos)
+j) γ sum(valor) → total (σ idveiculo = 1(servicos ⨝ servicos.id = realiza.idservico realiza)) <- sum (É a forma de 
+somar todos os valores dentro da tabela, de todas as tuplas juntas.)
+
