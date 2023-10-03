@@ -1,4 +1,4 @@
-1 - a) π Fname (DEPARTMENT ⨝ Fname = EMPLOYEE.Fname EMPLOYEE) ⨝ σ Dname = 'Research'(DEPARTMENT)
+1 - a) π Fname ( σ Dname = 'Research' (DEPARTMENT ⨝ Fname = EMPLOYEE.Fname EMPLOYEE))
 
 b) π Fname (σ Bdate >= '1960-01-01' and Bdate < '1970-01-01' (EMPLOYEE))
 
