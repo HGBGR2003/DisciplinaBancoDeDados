@@ -16,8 +16,8 @@ g) π nome,descricao (σ idveiculo = 5 ((servicos ⨝ servicos.id = realiza.idse
  
 h)σ marca = 'FIAT' and ano < 2022  (veiculos)
 
-i) π idservico (realiza ⨝ id = servicos.id servicos) ⨝ (realiza ⨝ nome = clientes.nome clientes) 
-⨝ σ nome = 'Pablo Corsa' (clientes)
+i) π nome,descricao,idveiculo (σ nome = 'Pablo Corsa' (realiza ⨝ idservico = servicos.id servicos ⨝ 
+idveiculo = veiculos.id veiculos ⨝ nome = clientes.nome clientes))
 
 j) γ sum(valor) → total (σ idveiculo = 1(servicos ⨝ servicos.id = realiza.idservico realiza)) <- sum (É a forma de 
 somar todos os valores dentro da tabela, de todas as tuplas juntas.)
