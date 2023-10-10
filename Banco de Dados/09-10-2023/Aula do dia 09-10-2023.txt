@@ -1,0 +1,29 @@
+https://www.sqlteam.com/articles/using-set-null-and-set-default-with-foreign-key-constraints
+
+Exemplo de schema:
+CREATE SCHEMA camara AUTHORIZATION postgres; (Criar áreas para que o usuário possa entrar)
+
+Criando tabelas: 
+CREATE TABLE contato(
+	id INT NOT NULL,
+	telefone VARCHAR(255),
+	nome VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id)
+);
+
+Criando um dominio para restrição:
+Informação incorreta, por isso não teve colocar no banco de dados.
+
+Exemplo de erro:
+INSERT INTO teste_dominio VALUES(69);
+
+Visualizando a tabela:
+SELECT * FROM public.teste_dominio
+
+
+Exemplo tabela teste2:
+CREATE TABLE teste2(
+	id SERIAL PRIMARY KEY,  /* Serial transforma qualquer valor em inteiro*/
+	cidade VARCHAR(255) NOT NULL UNIQUE, /*Unique é unico*/
+	uf CHAR(2) NOT NULL
+);
