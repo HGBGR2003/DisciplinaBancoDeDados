@@ -12,7 +12,12 @@ CREATE TABLE contato(
 );
 
 Criando um dominio para restrição:
-Informação incorreta, por isso não teve colocar no banco de dados.
+CREATE DOMAIN dnum AS INTEGER DEFAULT 1 CHECK (VALUE > 0 AND VALUE < 21)
+
+Criando a tabela teste_dominio:
+CREATE TABLE teste_dominio(
+	valor dnum
+);
 
 Exemplo de erro:
 INSERT INTO teste_dominio VALUES(69);
