@@ -1,0 +1,1 @@
+dominio carga_horaria values > 40 e menor que 80, do tipo INT
